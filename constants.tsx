@@ -32,9 +32,9 @@ export const SERVICES: Service[] = [
 ];
 
 export const STATS: Stat[] = [
-  { label: 'Projects Completed', value: '100', suffix: '+' },
-  { label: 'Industries Served', value: '50', suffix: '+' },
-  { label: 'Engagement Rate', value: '95', suffix: '%' },
+  { label: 'Projects Completed', value: '300', suffix: '+' },
+  { label: 'Industries Served', value: '12', suffix: '+' },
+  { label: 'Engagement Rate', value: '99', suffix: '%' },
 ];
 
 export const REVIEWS: Review[] = [

@@ -98,16 +98,16 @@ const Home = () => {
                 {/* Mini Stats in Hero */}
                 <div className="mt-12 flex gap-8 pt-8 border-t border-white/10">
                   <div>
-                    <p className="text-3xl font-bold text-white">100+</p>
+                    <p className="text-3xl font-bold text-white">300</p>
                     <p className="text-gray-400 text-sm">Projects</p>
                   </div>
                   <div>
-                    <p className="text-3xl font-bold text-white">95%</p>
-                    <p className="text-gray-400 text-sm">Success</p>
+                    <p className="text-3xl font-bold text-white">12</p>
+                    <p className="text-gray-400 text-sm">Industries</p>
                   </div>
                   <div>
-                    <p className="text-3xl font-bold text-white">50+</p>
-                    <p className="text-gray-400 text-sm">Awards</p>
+                    <p className="text-3xl font-bold text-white">99%</p>
+                    <p className="text-gray-400 text-sm">Engagement Rate</p>
                   </div>
                 </div>
               </motion.div>
