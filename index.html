@@ -1,70 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BST Events | Events, Exhibitions & Brandings</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              bst: {
-                dark: '#020617', // Ultra dark blue/slate
-                blue: '#1e40af', // Logo primary blue
-                light: '#60a5fa', // Lighter blue
-                accent: '#f97316', // Orange/Coral
-                cream: '#faf8f3', // Background
-                // Premium Blue/Orange Gradients
-                grape: '#1e3a8a', // Deep Royal Blue
-                fuchsia: '#3b82f6', // Electric Blue (replacing pink)
-                coral: '#fb923c', // Soft Orange
-                deep: '#0f172a'   // Midnight
-              }
-            },
-            fontFamily: {
-              sans: ['Poppins', 'sans-serif'],
-              serif: ['Poppins', 'serif'],
-            },
-            animation: {
-              'float': 'float 6s ease-in-out infinite',
-              'blob': 'blob 7s infinite',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-20px)' },
-              },
-              blob: {
-                '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                '100%': { transform: 'translate(0px, 0px) scale(1)' },
-              }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BST Events | Events, Exhibitions & Brandings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bst: {
+              dark: '#020617', // Ultra dark blue/slate
+              blue: '#1e40af', // Logo primary blue
+              light: '#60a5fa', // Lighter blue
+              accent: '#f97316', // Orange/Coral
+              cream: '#faf8f3', // Background
+              // Premium Blue/Orange Gradients
+              grape: '#1e3a8a', // Deep Royal Blue
+              fuchsia: '#3b82f6', // Electric Blue (replacing pink)
+              coral: '#fb923c', // Soft Orange
+              deep: '#0f172a'   // Midnight
             }
           },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+            serif: ['Poppins', 'serif'],
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'blob': 'blob 7s infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
+            blob: {
+              '0%': { transform: 'translate(0px, 0px) scale(1)' },
+              '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+              '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+              '100%': { transform: 'translate(0px, 0px) scale(1)' },
+            }
+          }
         },
-      }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #faf8f3; /* bst-cream */
-        color: #1e293b;
-        font-family: 'Poppins', sans-serif;
-        overflow-x: hidden;
-      }
-      /* Hide scrollbar for intro */
-      .no-scroll {
-        overflow: hidden;
-      }
-      .clip-path-slant {
-        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-      }
-    </style>
+      },
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #faf8f3;
+      /* bst-cream */
+      color: #1e293b;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Hide scrollbar for intro */
+    .no-scroll {
+      overflow: hidden;
+    }
+
+    .clip-path-slant {
+      clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -81,9 +86,11 @@
 }
 </script>
 </head>
-  <body>
-    <div id="root"></div>
-    <!-- Mount the Vite/React app -->
-    <script type="module" src="/index.tsx"></script>
-  </body>
+
+<body>
+  <div id="root"></div>
+  <!-- Mount the Vite/React app -->
+  <script type="module" src="/index.tsx"></script>
+</body>
+
 </html>

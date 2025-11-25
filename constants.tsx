@@ -5,6 +5,7 @@ import { Review, Project, Service, Stat } from './types';
 export const NAV_LINKS = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
+  { name: 'Vision & Mission', path: '/vision-mission' },
   { name: 'Gallery', path: '/gallery' },
   { name: 'Contact', path: '/contact' },
 ];
