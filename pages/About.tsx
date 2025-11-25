@@ -48,30 +48,45 @@ const About = () => {
         {/* Main Content */}
         <section className="py-16 md:py-24 relative bg-white">
           <div className="container mx-auto px-6 relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-bst-dark mb-6">Our strengths – your competitive advantage.</h2>
-                <p className="text-gray-600 leading-loose mb-6 text-lg font-light">
-                  What makes BST Events & Exhibition different? Our clients trust us for our ability to offer integrated brand marketing solutions all under one roof. We provide the depth and breadth clients seek, cost-effectively with a high degree of personalization.
-                </p>
-                <p className="text-gray-600 leading-loose text-lg font-light">
-                  We don't just manage events; we engineer experiences that drive ROI and provide peace of mind.
-                </p>
+            <div className="grid grid-cols-1 lg:grid-cols-[1.15fr,0.85fr] gap-12 lg:gap-16 items-center">
+              <div className="space-y-6 text-left">
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-bst-accent">Events / Exhibition Stands</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-bst-dark leading-snug">
+                  Corporate Event, an Award Ceremony, A Gala Dinner or a Birthday Celebration.
+                </h2>
+                <div className="space-y-5 text-gray-600 text-lg leading-relaxed">
+                  <p>
+                    Organizing an event requires a high level of professionalism, total dedication and a strong presence.
+                    We at BST Events, being a professional conference organizer, understand what it takes to organize a
+                    successful conference.
+                  </p>
+                  <p>
+                    Professionally handling all meetings and conference elements starting from blocking the venue and
+                    conference space, organizing the facilities, booking accommodation, obtaining all governmental
+                    documentation, providing technical equipment and support through to planning all logistics, sending
+                    invitations and putting a perfect running order for all involved parties to make sure all areas are well
+                    planned to bring perfect execution for your conference. And that’s not all we specialize in.
+                  </p>
+                  <p>
+                    Being a total solution provider for all components of a conference from A to Z, we have become preferred
+                    partners to many corporations, forum organizers; making many of them our repeating clients.
+                  </p>
+                </div>
               </div>
-              <div className="grid grid-cols-2 gap-6">
-                <motion.div
-                  whileHover={{ y: -10 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <img src="https://picsum.photos/seed/about1/400/400" alt="Planning" className="rounded-2xl shadow-lg mt-8 w-full h-auto" />
-                </motion.div>
-                <motion.div
-                  whileHover={{ y: -10 }}
-                  transition={{ duration: 0.3, delay: 0.1 }}
-                >
-                  <img src="https://picsum.photos/seed/about2/400/400" alt="Execution" className="rounded-2xl shadow-lg w-full h-full object-cover" />
-                </motion.div>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100"
+              >
+                <img
+                  src="https://i0.wp.com/www.bstevent.com/wp-content/uploads/2023/01/2560x1920_Home-Slider-03.jpg?fit=1536%2C1152&ssl=1"
+                  alt="BST premium event showcase"
+                  className="w-full h-[24rem] md:h-[32rem] object-cover"
+                  loading="lazy"
+                />
+              </motion.div>
             </div>
           </div>
         </section>
@@ -104,6 +119,42 @@ const About = () => {
                 <Shield className="w-12 h-12 text-bst-dark mb-4" />
                 <h3 className="text-xl font-bold mb-3">Our Promise</h3>
                 <p className="text-gray-600 font-light">Value, savings, ROI, and peace of mind – we guarantee them all for every client we serve.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Operations Manager Highlight */}
+        <section className="bg-white py-20">
+          <div className="container mx-auto px-6">
+            <div className="grid gap-10 lg:grid-cols-[0.8fr,1.2fr] items-center">
+              <div className="flex flex-col items-center text-center gap-6">
+                <div className="w-full border-t border-gray-200" />
+                <div className="w-full max-w-sm rounded-2xl border border-gray-200 p-4 shadow-lg shadow-gray-200/60">
+                  <img
+                    src="https://i0.wp.com/www.bstevent.com/wp-content/uploads/2023/01/akhlesh-1.jpg?fit=300%2C285&ssl=1"
+                    alt="Akhilesh Bhadran"
+                    className="w-full h-auto rounded-xl object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="text-2xl font-semibold text-bst-dark">Akhilesh Bhadran</p>
+                  <p className="text-sm uppercase tracking-[0.3em] text-gray-500 mt-2">Operations Manager</p>
+                </div>
+                <div className="w-full border-t border-gray-200" />
+                <p className="text-gray-600 leading-relaxed text-lg">
+                  “We work hard to make sure that our core values are reflected in every aspect of our business operations.
+                  To help create a unified company culture, we base our decisions and actions on our values. We look forward
+                  to hearing from you and helping you create the event of your dreams.”
+                </p>
+              </div>
+              <div className="rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
+                <img
+                  src="https://wallpaperaccess.com/full/4318144.jpg"
+                  alt="Dubai skyline sunset"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
