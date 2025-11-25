@@ -122,7 +122,7 @@ const Home = () => {
                 <div className="relative z-10">
                   <div className="absolute inset-0 bg-gradient-to-r from-bst-blue to-bst-accent blur-2xl opacity-30 transform rotate-12"></div>
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
-                    <img src="https://picsum.photos/id/1/800/600" alt="Event Hero" className="w-full h-full object-cover" />
+                    <img src="https://i0.wp.com/www.bstevent.com/wp-content/uploads/2023/01/2560x1920_Home-Slider_01_Op-01.jpg?fit=2560%2C1920&ssl=1" alt="Event Hero" className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-bst-dark/80 to-transparent"></div>
                     <div className="absolute bottom-6 left-6">
                       <p className="text-white font-bold text-lg">Tech Summit 2024</p>
