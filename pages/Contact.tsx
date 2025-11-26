@@ -1,22 +1,30 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import { Phone, Mail, MapPin, Send, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, MessageCircle, Sparkles, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ThreeBackground from '../components/ThreeBackground';
 
 const Contact = () => {
    return (
       <Layout>
-         <section className="bg-bst-dark text-white py-32 relative overflow-hidden min-h-[50vh] flex items-center">
-            {/* 3D Background */}
+         <section className="bg-gradient-to-br from-[#030712] via-[#0b1a3d] to-[#050915] text-white py-28 relative overflow-hidden min-h-[55vh] flex items-center">
             <ThreeBackground />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(96,165,250,0.18),transparent_40%)]"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(249,115,22,0.14),transparent_35%)]"></div>
 
-            <div className="container mx-auto px-6 text-center relative z-10">
+            <div className="container mx-auto px-6 text-center relative z-10 space-y-6">
+               <div className="inline-flex flex-wrap justify-center gap-3 text-[11px] uppercase tracking-[0.24em] text-white/70">
+                  <span className="px-3 py-1 rounded-full bg-white/10 border border-white/15 backdrop-blur-md flex items-center gap-2">
+                     <Sparkles size={14} className="text-bst-accent" /> Rapid response desk
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-white/10 border border-white/15 backdrop-blur-md">On-site across GCC</span>
+                  <span className="px-3 py-1 rounded-full bg-white/10 border border-white/15 backdrop-blur-md">Safety-first builds</span>
+               </div>
                <motion.h1
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8 }}
-                  className="text-4xl md:text-5xl lg:text-7xl font-extrabold mb-4"
+                  className="text-4xl md:text-5xl lg:text-7xl font-extrabold mb-2"
                >
                   Get In Touch
                </motion.h1>
@@ -26,7 +34,7 @@ const Contact = () => {
                   transition={{ duration: 0.8, delay: 0.2 }}
                   className="text-xl md:text-2xl opacity-90 font-light"
                >
-                  We would love to consult with you. Let's talk!
+                  Tell us about your venue, audience, and stakes— we reply within one business day.
                </motion.p>
             </div>
          </section>
