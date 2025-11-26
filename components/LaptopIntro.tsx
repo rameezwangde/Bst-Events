@@ -7,55 +7,88 @@ import * as THREE from 'three';
 
 const ScreenContent = () => {
   return (
-    // We transform the HTML to sit on the screen plane.
-    // Scale reduced to 0.41 and 'center' prop added to ensure perfect centering and no clipping
     <Html
       transform
       occlude
-      position={[0, 8, 0.2]} // Positioned such that 0.5 (parent) + 8.0 = 8.5 (center of screen)
+      position={[0, 8, 0.2]}
       rotation={[0, 0, 0]}
-      scale={0.41}
+      scale={0.52}
       center
-      style={{ width: '920px', height: '620px', pointerEvents: 'none' }}
+      style={{ width: '1200px', height: '780px', pointerEvents: 'none' }}
     >
-      {/* This is a mini replica of the Home Hero Section */}
-      <div className="w-full h-full bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-[#1e3a8a] via-[#0f172a] to-[#020617] overflow-hidden flex flex-col relative rounded-lg select-none shadow-2xl border border-white/10 font-sans">
+      {/* Mini replica of the updated Home hero */}
+      <div className="w-full h-full bg-gradient-to-br from-[#030712] via-[#0b1a3d] to-[#050915] overflow-hidden flex flex-col relative rounded-xl select-none shadow-2xl border border-white/10 font-sans">
         {/* Mini Nav */}
-        <div className="w-full p-8 flex justify-between items-center border-b border-white/5 bg-slate-900/50 backdrop-blur-md z-20">
+        <div className="w-full px-8 py-6 flex justify-between items-center border-b border-white/5 bg-slate-900/60 backdrop-blur-md z-20">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-              <div className="w-5 h-5 border-2 border-white"></div>
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30 border border-white/10">
+              <span className="text-white font-bold text-lg">BST</span>
             </div>
-            <span className="text-white font-extrabold text-xl tracking-tight">BST EVENTS</span>
+            <span className="text-white font-extrabold text-xl tracking-tight">BST Events</span>
           </div>
-          <div className="flex gap-8 text-sm font-bold text-gray-400 uppercase tracking-wider">
+          <div className="flex gap-6 text-xs font-bold text-gray-400 uppercase tracking-[0.2em]">
             <span className="text-white">Home</span>
             <span>About</span>
-            <span>Services</span>
+            <span>Gallery</span>
           </div>
         </div>
 
         {/* Mini Hero */}
-        <div className="flex-1 flex items-center px-16 relative">
-          {/* Background Gradients - More subtle and premium */}
-          <div className="absolute top-[-50%] right-[-20%] w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[100px]"></div>
-          <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[80px]"></div>
+        <div className="flex-1 flex items-center px-14 relative overflow-hidden">
+          <div className="absolute -top-20 -left-10 w-[420px] h-[420px] bg-orange-500/20 rounded-full blur-[120px]"></div>
+          <div className="absolute bottom-[-10%] right-[-5%] w-[520px] h-[520px] bg-blue-600/25 rounded-full blur-[140px]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),transparent_45%)]"></div>
 
-          <div className="relative z-10 w-full">
-            <div className="inline-block px-4 py-2 bg-white/5 border border-white/10 rounded-md text-xs font-bold text-blue-300 mb-6 tracking-[0.2em] uppercase backdrop-blur-sm">
-              Premium Event Management
+          <div className="relative z-10 w-full space-y-6">
+            <div className="flex flex-wrap items-center gap-3 text-[10px] uppercase tracking-[0.2em] text-white/70">
+              <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+                Dubai | GCC | Global
+              </span>
+              <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">Award-winning production</span>
             </div>
-            <h1 className="text-7xl font-extrabold text-white leading-[1.1] mb-6 drop-shadow-xl">
-              Create Moments <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 via-white to-blue-200">That Inspire</span>
+
+            <h1 className="text-6xl font-black text-white leading-[1.15] drop-shadow-2xl">
+              Experiences engineered <br /> to feel effortless.
             </h1>
-            <p className="text-gray-300 text-lg font-medium max-w-xl mb-10 leading-relaxed opacity-90 font-light">
-              Corporate Events, Award Ceremonies & Gala Dinners. We bring your vision to life.
+
+            <p className="text-gray-200 text-lg max-w-2xl leading-relaxed font-light">
+              Corporate summits, launch moments, gala dinners, and immersive exhibitions handled end-to-end by one team.
             </p>
-            <div className="flex gap-4">
-              <div className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-bold rounded-full shadow-lg shadow-blue-500/25 border border-white/10">
-                Plan Your Event
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl">
+              {[
+                'Single-team delivery from strategy to staging',
+                'Hospitality-grade guest journeys and show-calls',
+                'Dubai-built, globally ready production network'
+              ].map((item, idx) => (
+                <div key={idx} className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-3 text-white text-sm">
+                  {item}
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-3 items-center">
+              <div className="px-7 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-bold rounded-full shadow-lg shadow-blue-500/25 border border-white/10">
+                Plan your event
               </div>
+              <div className="px-7 py-3 bg-white/5 border border-white/10 text-white text-sm font-bold rounded-full backdrop-blur-sm">
+                Watch reel
+              </div>
+              <span className="text-white/60 text-xs">Response within one business day.</span>
+            </div>
+
+            <div className="grid grid-cols-3 gap-3 pt-2 max-w-md">
+              {[
+                { label: 'Projects delivered', value: '300+' },
+                { label: 'Cities covered', value: '12' },
+                { label: 'Client retention', value: '96%' }
+              ].map((stat) => (
+                <div key={stat.label} className="rounded-2xl border border-white/10 bg-white/5 p-4 text-white text-center">
+                  <p className="text-2xl font-extrabold">{stat.value}</p>
+                  <p className="text-white/70 text-[11px] uppercase tracking-[0.15em]">{stat.label}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -66,6 +99,9 @@ const ScreenContent = () => {
 
 const StylizedLaptop = () => {
   const group = useRef<THREE.Group>(null);
+  const deckLabel = useRef<any>(null);
+  const lastVisible = useRef(0);
+  const labelText = 'BST EVENTS';
 
   // Float animation for the whole laptop assembly
   useFrame((state) => {
@@ -74,6 +110,22 @@ const StylizedLaptop = () => {
       // Gentle float with very subtle rotation
       group.current.position.y = -3 + Math.sin(t / 2) * 0.1;
       group.current.rotation.y = Math.sin(t / 4) * 0.02;
+    }
+
+    // Smooth typing effect for deck label
+    if (deckLabel.current) {
+      const speed = 4; // chars per second
+      const hold = 0.6; // pause when fully typed
+      const total = labelText.length;
+      const cycleDuration = total / speed + hold;
+      const timeInCycle = state.clock.getElapsedTime() % cycleDuration;
+      const visible = timeInCycle >= total / speed
+        ? total
+        : Math.max(1, Math.floor(timeInCycle * speed));
+      if (visible !== lastVisible.current) {
+        deckLabel.current.text = labelText.slice(0, visible);
+        lastVisible.current = visible;
+      }
     }
   });
 
@@ -108,13 +160,14 @@ const StylizedLaptop = () => {
 
       {/* Highlighted BST EVENTS Text on Keyboard Deck */}
       <Text
+        ref={deckLabel}
         position={[0, 0.66, 1.5]} // Positioned just above keys, below trackpad/space area
         rotation={[-Math.PI / 2, 0, 0]}
         fontSize={1.2}
         letterSpacing={0.2}
         font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff"
       >
-        BST EVENTS
+        {labelText}
         <meshStandardMaterial color="#f97316" emissive="#f97316" emissiveIntensity={1.5} toneMapped={false} />
       </Text>
 
